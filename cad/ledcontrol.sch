@@ -957,20 +957,6 @@ DOWN</text>
 <wire x1="-2.286" y1="-1.016" x2="-2.286" y2="1.016" width="0.127" layer="21"/>
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 </package>
-<package name="SYMBOL-WARNING">
-<wire x1="-3" y1="-2" x2="3" y2="-2" width="0.35" layer="21"/>
-<wire x1="3" y1="-2" x2="0" y2="3.2" width="0.35" layer="21"/>
-<wire x1="0" y1="3.2" x2="-3" y2="-2" width="0.35" layer="21"/>
-<polygon width="0.2" layer="21">
-<vertex x="0.25" y="1.5"/>
-<vertex x="-0.75" y="0"/>
-<vertex x="0" y="-0.25"/>
-<vertex x="-1" y="-1.5"/>
-<vertex x="1" y="-0.25"/>
-<vertex x="0.25" y="0.25"/>
-<vertex x="0.75" y="0.75"/>
-</polygon>
-</package>
 </packages>
 <symbols>
 <symbol name="STM32F411/48">
@@ -1323,13 +1309,6 @@ DOWN</text>
 <wire x1="7.62" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
 <text x="-2.54" y="-5.08" size="2.54" layer="95">&gt;NAME</text>
-</symbol>
-<symbol name="SYMBOL-WARNING">
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<text x="-3.81" y="-1.905" size="1.27" layer="94" ratio="10">WARNING</text>
 </symbol>
 <symbol name="TMP100">
 <pin name="VCC" x="0" y="15.24" visible="pin" length="middle" rot="R270"/>
@@ -2103,18 +2082,6 @@ DOWN</text>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SYMBOL-WARNING">
-<gates>
-<gate name="G$1" symbol="SYMBOL-WARNING" x="0" y="2.54"/>
-</gates>
-<devices>
-<device name="" package="SYMBOL-WARNING">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -6225,7 +6192,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND3" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="VCCM3" library="jaw" deviceset="PWR-VCCM" device=""/>
 <part name="VCC4" library="jaw" deviceset="PWR-VCC" device=""/>
-<part name="C1" library="jaw" deviceset="C" device="0603" value="1u, 12V"/>
+<part name="C1" library="jaw" deviceset="C" device="0603" value=".1u, 12V"/>
 <part name="C2" library="jaw" deviceset="C" device="0603" value="1u"/>
 <part name="C3" library="jaw" deviceset="C" device="1210" value="100u"/>
 <part name="GND4" library="jaw" deviceset="PWR-GND" device=""/>
@@ -6295,7 +6262,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R27" library="jaw" deviceset="R" device="0603" value="100"/>
 <part name="R28" library="jaw" deviceset="R" device="0603" value="1M"/>
 <part name="CN3" library="jaw" deviceset="HEADER-1X2" device="-THM" value="HEADER-1X2-THM"/>
-<part name="U$3" library="jaw" deviceset="SYMBOL-WARNING" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="C24" library="jaw" deviceset="C" device="0603" value=".1u"/>
 <part name="U5" library="jaw" deviceset="TMP100" device=""/>
@@ -6303,6 +6269,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="VCC9" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="GND23" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="GND24" library="jaw" deviceset="PWR-GND" device=""/>
+<part name="C25" library="jaw" deviceset="C" device="0603" value="10u,12V"/>
+<part name="C26" library="jaw" deviceset="C" device="0603" value="10u,12V"/>
+<part name="C27" library="jaw" deviceset="C" device="0603" value=".1u,12V"/>
+<part name="VCCM7" library="jaw" deviceset="PWR-VCCM" device=""/>
+<part name="GND27" library="jaw" deviceset="PWR-GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6372,7 +6343,7 @@ LED board</text>
 <instance part="R2" gate="G$1" x="198.12" y="205.74"/>
 <instance part="R10" gate="G$1" x="203.2" y="200.66" rot="R270"/>
 <instance part="CONN1" gate="G$1" x="213.36" y="144.78"/>
-<instance part="VREG1" gate="G$1" x="48.26" y="17.78"/>
+<instance part="VREG1" gate="G$1" x="53.34" y="17.78"/>
 <instance part="Q2" gate="G$1" x="60.96" y="58.42" rot="R180"/>
 <instance part="D2" gate="G$1" x="50.8" y="50.8"/>
 <instance part="R1" gate="G$1" x="60.96" y="43.18" rot="R90"/>
@@ -6455,7 +6426,6 @@ LED board</text>
 <instance part="R27" gate="G$1" x="144.78" y="25.4"/>
 <instance part="R28" gate="G$1" x="149.86" y="20.32" rot="R270"/>
 <instance part="CN3" gate="G$1" x="162.56" y="40.64"/>
-<instance part="U$3" gate="G$1" x="419.1" y="30.48"/>
 <instance part="LOGO1" gate="G$1" x="406.4" y="27.94"/>
 <instance part="C24" gate="G$1" x="187.96" y="22.86"/>
 <instance part="U5" gate="G$1" x="218.44" y="22.86"/>
@@ -6463,6 +6433,11 @@ LED board</text>
 <instance part="VCC9" gate="G$1" x="218.44" y="40.64"/>
 <instance part="GND23" gate="G$1" x="187.96" y="12.7"/>
 <instance part="GND24" gate="G$1" x="218.44" y="5.08"/>
+<instance part="C25" gate="G$1" x="22.86" y="15.24"/>
+<instance part="C26" gate="G$1" x="370.84" y="243.84"/>
+<instance part="C27" gate="G$1" x="381" y="243.84"/>
+<instance part="VCCM7" gate="G$1" x="375.92" y="254"/>
+<instance part="GND27" gate="G$1" x="375.92" y="233.68"/>
 </instances>
 <busses>
 </busses>
@@ -6557,12 +6532,13 @@ LED board</text>
 <segment>
 <pinref part="C1" gate="G$1" pin="P$2"/>
 <pinref part="VREG1" gate="G$1" pin="GND"/>
-<wire x1="17.78" y1="10.16" x2="43.18" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="10.16" x2="22.86" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="P$2"/>
-<wire x1="43.18" y1="10.16" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="10.16" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="10.16" x2="43.18" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="10.16" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="10.16" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="10.16" x2="71.12" y2="12.7" width="0.1524" layer="91"/>
-<junction x="48.26" y="10.16"/>
+<junction x="53.34" y="10.16"/>
 <pinref part="C3" gate="G$1" pin="P$2"/>
 <wire x1="71.12" y1="10.16" x2="76.2" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="10.16" x2="76.2" y2="12.7" width="0.1524" layer="91"/>
@@ -6577,6 +6553,9 @@ LED board</text>
 <wire x1="10.16" y1="12.7" x2="10.16" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="10.16" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
 <junction x="17.78" y="10.16"/>
+<pinref part="C25" gate="G$1" pin="P$2"/>
+<wire x1="22.86" y1="12.7" x2="22.86" y2="10.16" width="0.1524" layer="91"/>
+<junction x="22.86" y="10.16"/>
 </segment>
 <segment>
 <pinref part="R14" gate="G$1" pin="P$2"/>
@@ -6677,6 +6656,15 @@ LED board</text>
 <wire x1="203.2" y1="25.4" x2="200.66" y2="25.4" width="0.1524" layer="91"/>
 <label x="195.58" y="25.4" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="C26" gate="G$1" pin="P$2"/>
+<pinref part="C27" gate="G$1" pin="P$2"/>
+<wire x1="370.84" y1="241.3" x2="375.92" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="GND27" gate="G$1" pin="GND"/>
+<wire x1="375.92" y1="241.3" x2="381" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="375.92" y1="241.3" x2="375.92" y2="236.22" width="0.1524" layer="91"/>
+<junction x="375.92" y="241.3"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -6726,7 +6714,7 @@ LED board</text>
 <segment>
 <pinref part="VREG1" gate="G$1" pin="VOUT"/>
 <pinref part="C2" gate="G$1" pin="P$1"/>
-<wire x1="63.5" y1="20.32" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="20.32" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="P$1"/>
 <wire x1="71.12" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 <junction x="71.12" y="20.32"/>
@@ -7063,12 +7051,15 @@ LED board</text>
 <pinref part="VCCM3" gate="G$1" pin="VCCM"/>
 <wire x1="10.16" y1="20.32" x2="17.78" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="P$1"/>
-<wire x1="17.78" y1="20.32" x2="33.02" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="20.32" x2="22.86" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="17.78" x2="17.78" y2="20.32" width="0.1524" layer="91"/>
 <junction x="17.78" y="20.32"/>
 <pinref part="CN2" gate="G$1" pin="2"/>
 <wire x1="10.16" y1="15.24" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
 <junction x="10.16" y="20.32"/>
+<pinref part="C25" gate="G$1" pin="P$1"/>
+<junction x="22.86" y="20.32"/>
 </segment>
 <segment>
 <pinref part="L2" gate="G$1" pin="P$2"/>
@@ -7086,6 +7077,15 @@ LED board</text>
 <pinref part="CONN1" gate="G$1" pin="12"/>
 <wire x1="220.98" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
 <label x="223.52" y="144.78" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="C26" gate="G$1" pin="P$1"/>
+<pinref part="C27" gate="G$1" pin="P$1"/>
+<wire x1="370.84" y1="248.92" x2="375.92" y2="248.92" width="0.1524" layer="91"/>
+<pinref part="VCCM7" gate="G$1" pin="VCCM"/>
+<wire x1="375.92" y1="248.92" x2="381" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="375.92" y1="248.92" x2="375.92" y2="251.46" width="0.1524" layer="91"/>
+<junction x="375.92" y="248.92"/>
 </segment>
 </net>
 <net name="PWRSW" class="0">
@@ -7122,8 +7122,8 @@ LED board</text>
 </segment>
 <segment>
 <pinref part="VREG1" gate="G$1" pin="NSHTDN"/>
-<wire x1="33.02" y1="17.78" x2="27.94" y2="17.78" width="0.1524" layer="91"/>
-<label x="20.32" y="17.78" size="1.778" layer="95"/>
+<wire x1="38.1" y1="17.78" x2="35.56" y2="17.78" width="0.1524" layer="91"/>
+<label x="27.94" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IOPEN" class="0">
