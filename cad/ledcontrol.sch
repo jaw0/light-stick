@@ -957,6 +957,18 @@ DOWN</text>
 <wire x1="-2.286" y1="-1.016" x2="-2.286" y2="1.016" width="0.127" layer="21"/>
 <text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 </package>
+<package name="DO-220AA">
+<wire x1="-2.8" y1="1.4" x2="2.3" y2="1.4" width="0.1" layer="21"/>
+<wire x1="2.3" y1="1.4" x2="2.3" y2="-1.4" width="0.1" layer="21"/>
+<wire x1="2.3" y1="-1.4" x2="-2.8" y2="-1.4" width="0.1" layer="21"/>
+<smd name="C" x="-1.2" y="0" dx="2.6" dy="2.6" layer="1"/>
+<smd name="A" x="1.8" y="0" dx="1.5" dy="0.8" layer="1" rot="R90"/>
+<wire x1="0.5" y1="0" x2="1.2" y2="0.6" width="0.1" layer="21"/>
+<wire x1="1.2" y1="0.6" x2="1.2" y2="-0.6" width="0.1" layer="21"/>
+<wire x1="1.2" y1="-0.6" x2="0.5" y2="0" width="0.1" layer="21"/>
+<rectangle x1="-2.9" y1="-1.4" x2="-2.5" y2="1.4" layer="21"/>
+<rectangle x1="0.1" y1="-1.4" x2="0.4" y2="1.4" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="STM32F411/48">
@@ -1711,6 +1723,15 @@ DOWN</text>
 </technologies>
 </device>
 <device name="-DO214AB" package="DO-214AB">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-DO220AA" package="DO-220AA">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -6179,7 +6200,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R2" library="jaw" deviceset="R" device="0603" value="100"/>
 <part name="R10" library="jaw" deviceset="R" device="0603" value="1M"/>
 <part name="CONN1" library="jaw" deviceset="HEADER-6X2" device="-PTH"/>
-<part name="VREG1" library="jaw" deviceset="MCP1824" device=""/>
+<part name="VREG1" library="jaw" deviceset="MCP1824" device="" value="MCP1754"/>
 <part name="Q2" library="jaw" deviceset="MOSFET-P" device=""/>
 <part name="D2" library="jaw" deviceset="DIODE" device="SOD-323"/>
 <part name="R1" library="jaw" deviceset="R" device="0603" value="100k"/>
@@ -6207,21 +6228,21 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R13" library="jaw" deviceset="R" device="0603" value="1k"/>
 <part name="R14" library="jaw" deviceset="R" device="1206" value=".01"/>
 <part name="C5" library="jaw" deviceset="C" device="0603" value=".002u"/>
-<part name="R15" library="jaw" deviceset="R" device="0603" value="88k7"/>
-<part name="R16" library="jaw" deviceset="R" device="0603" value="3k3"/>
+<part name="R15" library="jaw" deviceset="R" device="0603" value="88k7, .1%"/>
+<part name="R16" library="jaw" deviceset="R" device="0603" value="3k3, .1%"/>
 <part name="J1" library="jaw" deviceset="HEADER-4X1" device="-PTH"/>
 <part name="VCCM4" library="jaw" deviceset="PWR-VCCM" device=""/>
-<part name="D3" library="jaw" deviceset="DIODE" device="DO-214AC" value="PMEG6020ETR115"/>
+<part name="D3" library="jaw" deviceset="DIODE" device="-DO220AA" value="ss3p6"/>
 <part name="C6" library="jaw" deviceset="C-POL" device="-KE0" value="100u,100v"/>
 <part name="GND5" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="GND6" library="jaw" deviceset="PWR-GND" device=""/>
-<part name="U2" library="jaw" deviceset="LMP8640" device=""/>
+<part name="U2" library="jaw" deviceset="LMP8640" device="" value="LMP8640-H"/>
 <part name="VCC1" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="GND11" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="C8" library="jaw" deviceset="C" device="0603" value=".1u"/>
 <part name="C9" library="jaw" deviceset="C" device="0805" value=".1u, 100v"/>
-<part name="R17" library="jaw" deviceset="R" device="0603" value="14k7"/>
-<part name="R18" library="jaw" deviceset="R" device="0603" value="3k3"/>
+<part name="R17" library="jaw" deviceset="R" device="0603" value="14k7, .1%"/>
+<part name="R18" library="jaw" deviceset="R" device="0603" value="3k3, .1%"/>
 <part name="GND12" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="VCCM5" library="jaw" deviceset="PWR-VCCM" device=""/>
 <part name="Q5" library="jaw" deviceset="MOSFET" device="-SOT-223" value="ZXMN6A08GTA"/>
@@ -6231,10 +6252,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R21" library="jaw" deviceset="R" device="0603" value="1k"/>
 <part name="R22" library="jaw" deviceset="R" device="1206" value=".01"/>
 <part name="C11" library="jaw" deviceset="C" device="0603" value=".002u"/>
-<part name="R23" library="jaw" deviceset="R" device="0603" value="88k7"/>
-<part name="R24" library="jaw" deviceset="R" device="0603" value="3k3"/>
+<part name="R23" library="jaw" deviceset="R" device="0603" value="88k7, .1%"/>
+<part name="R24" library="jaw" deviceset="R" device="0603" value="3k3, .1%"/>
 <part name="VCCM6" library="jaw" deviceset="PWR-VCCM" device=""/>
-<part name="D4" library="jaw" deviceset="DIODE" device="DO-214AC" value="PMEG6020ETR115"/>
+<part name="D4" library="jaw" deviceset="DIODE" device="-DO220AA" value="ss3p6"/>
 <part name="C12" library="jaw" deviceset="C-POL" device="-KE0" value="100u,100v"/>
 <part name="GND13" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="GND14" library="jaw" deviceset="PWR-GND" device=""/>
@@ -6256,7 +6277,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R26" library="jaw" deviceset="R" device="0603" value="100"/>
 <part name="C18" library="jaw" deviceset="C" device="0603" value="1u"/>
 <part name="D5" library="jaw" deviceset="DIODE" device="SOD-323" value="any"/>
-<part name="VCC6" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="GND22" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="Q6" library="jaw" deviceset="MOSFET" device="SOT-23" value="IRLML6344TRPBF"/>
 <part name="R27" library="jaw" deviceset="R" device="0603" value="100"/>
@@ -6274,6 +6294,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C27" library="jaw" deviceset="C" device="0603" value=".1u,12V"/>
 <part name="VCCM7" library="jaw" deviceset="PWR-VCCM" device=""/>
 <part name="GND27" library="jaw" deviceset="PWR-GND" device=""/>
+<part name="VCCM8" library="jaw" deviceset="PWR-VCCM" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6289,7 +6310,7 @@ internal pullup</text>
 <wire x1="261.62" y1="78.74" x2="424.18" y2="78.74" width="0.254" layer="97"/>
 <text x="43.18" y="68.58" size="1.778" layer="97">connector
 to switch</text>
-<text x="22.86" y="22.86" size="1.778" layer="97">6V max</text>
+<text x="22.86" y="22.86" size="1.778" layer="97">12V max</text>
 <text x="208.28" y="165.1" size="1.778" layer="97">display</text>
 <text x="208.28" y="134.62" size="1.778" layer="97">programming</text>
 <text x="393.7" y="213.36" size="1.778" layer="97">connectors to
@@ -6420,7 +6441,6 @@ LED board</text>
 <instance part="R26" gate="G$1" x="276.86" y="104.14" rot="R180"/>
 <instance part="C18" gate="G$1" x="271.78" y="96.52"/>
 <instance part="D5" gate="G$1" x="149.86" y="40.64" rot="R90"/>
-<instance part="VCC6" gate="G$1" x="157.48" y="53.34"/>
 <instance part="GND22" gate="G$1" x="157.48" y="12.7"/>
 <instance part="Q6" gate="G$1" x="157.48" y="27.94"/>
 <instance part="R27" gate="G$1" x="144.78" y="25.4"/>
@@ -6438,6 +6458,7 @@ LED board</text>
 <instance part="C27" gate="G$1" x="381" y="243.84"/>
 <instance part="VCCM7" gate="G$1" x="375.92" y="254"/>
 <instance part="GND27" gate="G$1" x="375.92" y="233.68"/>
+<instance part="VCCM8" gate="G$1" x="157.48" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -6760,16 +6781,6 @@ LED board</text>
 <label x="391.16" y="175.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="VCC6" gate="G$1" pin="VCC"/>
-<wire x1="157.48" y1="50.8" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="D5" gate="G$1" pin="C"/>
-<wire x1="149.86" y1="43.18" x2="149.86" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="48.26" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="CN3" gate="G$1" pin="P$1"/>
-<wire x1="157.48" y1="43.18" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
-<junction x="157.48" y="48.26"/>
-</segment>
-<segment>
 <pinref part="C24" gate="G$1" pin="P$1"/>
 <wire x1="187.96" y1="30.48" x2="187.96" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="VCC8" gate="G$1" pin="VCC"/>
@@ -7086,6 +7097,16 @@ LED board</text>
 <wire x1="375.92" y1="248.92" x2="381" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="248.92" x2="375.92" y2="251.46" width="0.1524" layer="91"/>
 <junction x="375.92" y="248.92"/>
+</segment>
+<segment>
+<wire x1="157.48" y1="50.8" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="D5" gate="G$1" pin="C"/>
+<wire x1="149.86" y1="43.18" x2="149.86" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="48.26" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="CN3" gate="G$1" pin="P$1"/>
+<wire x1="157.48" y1="43.18" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
+<junction x="157.48" y="48.26"/>
+<pinref part="VCCM8" gate="G$1" pin="VCCM"/>
 </segment>
 </net>
 <net name="PWRSW" class="0">

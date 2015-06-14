@@ -4585,11 +4585,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LED19" library="jaw" deviceset="LED" device="-L4-P1A" value="C"/>
 <part name="LED20" library="jaw" deviceset="LED" device="-L4-P1A" value="C"/>
 <part name="U1" library="jaw" deviceset="BH1745" device=""/>
-<part name="C1" library="jaw" deviceset="C" device="0603"/>
+<part name="C1" library="jaw" deviceset="C" device="0603" value=".1u"/>
 <part name="VCC1" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="GND1" library="jaw" deviceset="PWR-GND" device=""/>
-<part name="C2" library="jaw" deviceset="C" device="0603"/>
-<part name="C3" library="jaw" deviceset="C" device="0603"/>
+<part name="C2" library="jaw" deviceset="C" device="0603" value=".1u"/>
+<part name="C3" library="jaw" deviceset="C" device="0603" value=".1u"/>
 <part name="VCC3" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="VCC4" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="VCC5" library="jaw" deviceset="PWR-VCC" device=""/>
