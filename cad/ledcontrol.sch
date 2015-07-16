@@ -509,49 +509,6 @@ chip</description>
 <rectangle x1="-0.5" y1="-0.7" x2="-0.3" y2="0.7" layer="21"/>
 <rectangle x1="-1.7" y1="-0.7" x2="-1.45" y2="0.7" layer="21"/>
 </package>
-<package name="DO-219AB">
-<smd name="A" x="-1.4" y="0" dx="1.4" dy="1.4" layer="1"/>
-<smd name="C" x="1.4" y="0" dx="1.4" dy="1.4" layer="1"/>
-<wire x1="-2.3" y1="1.3" x2="0.5" y2="1.3" width="0.1" layer="21"/>
-<wire x1="0.5" y1="1.3" x2="2.3" y2="1.3" width="0.1" layer="21"/>
-<wire x1="2.3" y1="1.3" x2="2.3" y2="-1.3" width="0.1" layer="21"/>
-<wire x1="2.3" y1="-1.3" x2="0.5" y2="-1.3" width="0.1" layer="21"/>
-<wire x1="0.5" y1="-1.3" x2="-2.3" y2="-1.3" width="0.1" layer="21"/>
-<wire x1="-2.3" y1="-1.3" x2="-2.3" y2="1.3" width="0.1" layer="21"/>
-<wire x1="0.5" y1="1.3" x2="0.5" y2="0" width="0.2" layer="21"/>
-<wire x1="0.5" y1="0" x2="0.5" y2="-1.3" width="0.1" layer="21"/>
-<wire x1="0.5" y1="-1.3" x2="0.5" y2="0" width="0.2" layer="21"/>
-<wire x1="0.5" y1="0" x2="-0.4" y2="0.6" width="0.1" layer="21"/>
-<wire x1="-0.4" y1="0.6" x2="-0.4" y2="-0.6" width="0.1" layer="21"/>
-<wire x1="-0.4" y1="-0.6" x2="0.5" y2="0" width="0.1" layer="21"/>
-<text x="-2.5" y="1.5" size="1.27" layer="25">&gt;NAME</text>
-</package>
-<package name="DO-214AA">
-<smd name="A" x="-2.4" y="0" dx="2.2" dy="2.2" layer="1"/>
-<smd name="C" x="2.4" y="0" dx="2.2" dy="2.2" layer="1"/>
-<wire x1="-3.6" y1="2.2" x2="3.6" y2="2.2" width="0.1" layer="21"/>
-<wire x1="3.6" y1="2.2" x2="3.6" y2="-2.2" width="0.1" layer="21"/>
-<wire x1="3.6" y1="-2.2" x2="-3.6" y2="-2.2" width="0.1" layer="21"/>
-<wire x1="-3.6" y1="-2.2" x2="-3.6" y2="2.2" width="0.1" layer="21"/>
-<text x="-1.5" y="2.4" size="1" layer="25" ratio="10">&gt;NAME</text>
-<wire x1="-0.8" y1="1.1" x2="-0.8" y2="-1.1" width="0.1" layer="21"/>
-<wire x1="-0.8" y1="-1.1" x2="0.7" y2="0" width="0.1" layer="21"/>
-<wire x1="0.7" y1="0" x2="-0.8" y2="1.1" width="0.1" layer="21"/>
-<wire x1="0.9" y1="2.1" x2="0.9" y2="-2.1" width="0.2" layer="21"/>
-</package>
-<package name="DO-214AC">
-<smd name="A" x="-2" y="0" dx="1.6" dy="1.75" layer="1" rot="R90"/>
-<smd name="C" x="2" y="0" dx="1.6" dy="1.75" layer="1" rot="R90"/>
-<wire x1="-3" y1="1.5" x2="3" y2="1.5" width="0.1" layer="21"/>
-<wire x1="3" y1="1.5" x2="3" y2="-1.5" width="0.1" layer="21"/>
-<wire x1="3" y1="-1.5" x2="-3" y2="-1.5" width="0.1" layer="21"/>
-<wire x1="-3" y1="-1.5" x2="-3" y2="1.5" width="0.1" layer="21"/>
-<wire x1="0.85" y1="1.35" x2="0.85" y2="-1.35" width="0.2" layer="21"/>
-<wire x1="0.6" y1="0" x2="-0.65" y2="0.75" width="0.1" layer="21"/>
-<wire x1="-0.65" y1="0.75" x2="-0.65" y2="-0.75" width="0.1" layer="21"/>
-<wire x1="-0.65" y1="-0.75" x2="0.6" y2="0" width="0.1" layer="21"/>
-<text x="-2" y="1.75" size="1" layer="25" ratio="10">&gt;NAME</text>
-</package>
 <package name="TO-220AC">
 <pad name="A" x="0" y="2.54" drill="1.5" diameter="2.5"/>
 <pad name="C" x="0" y="-2.54" drill="1.5" diameter="2.5"/>
@@ -864,19 +821,6 @@ DOWN</text>
 <text x="-2.3" y="-2.1" size="1" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="0.3" y="-1.4" size="0.5" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="DO-214AB">
-<smd name="A" x="-3.6" y="0" dx="2.6" dy="3.2" layer="1"/>
-<smd name="C" x="3.6" y="0" dx="2.6" dy="3.2" layer="1"/>
-<wire x1="-5" y1="3" x2="5.1" y2="3" width="0.1" layer="21"/>
-<wire x1="5.1" y1="3" x2="5.1" y2="-3" width="0.1" layer="21"/>
-<wire x1="5.1" y1="-3" x2="-5" y2="-3" width="0.1" layer="21"/>
-<wire x1="-5" y1="-3" x2="-5" y2="3" width="0.1" layer="21"/>
-<text x="-1.9" y="3.2" size="1" layer="25" ratio="10">&gt;NAME</text>
-<wire x1="-2" y1="2" x2="-2" y2="-2" width="0.1" layer="21"/>
-<wire x1="-2" y1="-2" x2="0.7" y2="0" width="0.1" layer="21"/>
-<wire x1="0.7" y1="0" x2="-2" y2="2" width="0.1" layer="21"/>
-<rectangle x1="0.8" y1="-3" x2="2.1" y2="3" layer="21"/>
-</package>
 <package name="HEADER-3X2-PTH">
 <pad name="1" x="0" y="0" drill="1.016" shape="square"/>
 <pad name="2" x="0" y="2.54" drill="1.016"/>
@@ -962,12 +906,71 @@ DOWN</text>
 <wire x1="2.3" y1="1.4" x2="2.3" y2="-1.4" width="0.1" layer="21"/>
 <wire x1="2.3" y1="-1.4" x2="-2.8" y2="-1.4" width="0.1" layer="21"/>
 <smd name="C" x="-1.2" y="0" dx="2.6" dy="2.6" layer="1"/>
-<smd name="A" x="1.8" y="0" dx="1.5" dy="0.8" layer="1" rot="R90"/>
+<smd name="A" x="1.8" y="0" dx="1.5" dy="0.9" layer="1" rot="R90"/>
 <wire x1="0.5" y1="0" x2="1.2" y2="0.6" width="0.1" layer="21"/>
 <wire x1="1.2" y1="0.6" x2="1.2" y2="-0.6" width="0.1" layer="21"/>
 <wire x1="1.2" y1="-0.6" x2="0.5" y2="0" width="0.1" layer="21"/>
 <rectangle x1="-2.9" y1="-1.4" x2="-2.5" y2="1.4" layer="21"/>
 <rectangle x1="0.1" y1="-1.4" x2="0.4" y2="1.4" layer="21"/>
+<text x="-2.5" y="1.6" size="1" layer="25" ratio="10">&gt;NAME</text>
+</package>
+<package name="DO-219AB">
+<smd name="A" x="1.4" y="0" dx="1.4" dy="1.4" layer="1" rot="R180"/>
+<smd name="C" x="-1.4" y="0" dx="1.4" dy="1.4" layer="1" rot="R180"/>
+<wire x1="2.3" y1="-1.3" x2="-0.5" y2="-1.3" width="0.1" layer="21"/>
+<wire x1="-0.5" y1="-1.3" x2="-2.3" y2="-1.3" width="0.1" layer="21"/>
+<wire x1="-2.3" y1="-1.3" x2="-2.3" y2="1.3" width="0.1" layer="21"/>
+<wire x1="-2.3" y1="1.3" x2="-0.5" y2="1.3" width="0.1" layer="21"/>
+<wire x1="-0.5" y1="1.3" x2="2.3" y2="1.3" width="0.1" layer="21"/>
+<wire x1="2.3" y1="1.3" x2="2.3" y2="-1.3" width="0.1" layer="21"/>
+<wire x1="-0.3" y1="0" x2="0.5" y2="-0.6" width="0.1" layer="21"/>
+<wire x1="0.5" y1="-0.6" x2="0.5" y2="0.6" width="0.1" layer="21"/>
+<wire x1="0.5" y1="0.6" x2="-0.3" y2="0" width="0.1" layer="21"/>
+<text x="-2.5" y="1.5" size="1.27" layer="25">&gt;NAME</text>
+<rectangle x1="-0.7" y1="-1.3" x2="-0.4" y2="1.3" layer="21"/>
+<rectangle x1="-2.4" y1="-1.3" x2="-2.1" y2="1.3" layer="21"/>
+</package>
+<package name="DO-214AA">
+<smd name="A" x="2.4" y="0" dx="2.2" dy="2.2" layer="1" rot="R180"/>
+<smd name="C" x="-2.4" y="0" dx="2.2" dy="2.2" layer="1" rot="R180"/>
+<wire x1="3.6" y1="-2.2" x2="-3.9" y2="-2.2" width="0.1" layer="21"/>
+<wire x1="-3.9" y1="-2.2" x2="-3.9" y2="2.2" width="0.1" layer="21"/>
+<wire x1="-3.9" y1="2.2" x2="3.6" y2="2.2" width="0.1" layer="21"/>
+<wire x1="3.6" y1="2.2" x2="3.6" y2="-2.2" width="0.1" layer="21"/>
+<text x="-2.47" y="2.5" size="1" layer="25" ratio="10">&gt;NAME</text>
+<wire x1="0.8" y1="-1.1" x2="0.8" y2="1.1" width="0.1" layer="21"/>
+<wire x1="0.8" y1="1.1" x2="-0.7" y2="0" width="0.1" layer="21"/>
+<wire x1="-0.7" y1="0" x2="0.8" y2="-1.1" width="0.1" layer="21"/>
+<rectangle x1="-1.3" y1="-2.2" x2="-0.9" y2="2.2" layer="21"/>
+<rectangle x1="-3.9" y1="-2.2" x2="-3.6" y2="2.2" layer="21"/>
+</package>
+<package name="DO-214AC">
+<smd name="A" x="2" y="0" dx="1.6" dy="1.75" layer="1" rot="R270"/>
+<smd name="C" x="-2" y="0" dx="1.6" dy="1.75" layer="1" rot="R270"/>
+<wire x1="3" y1="-1.5" x2="-3.2" y2="-1.5" width="0.1" layer="21"/>
+<wire x1="-3.2" y1="-1.5" x2="-3.2" y2="1.5" width="0.1" layer="21"/>
+<wire x1="-3.2" y1="1.5" x2="3" y2="1.5" width="0.1" layer="21"/>
+<wire x1="3" y1="1.5" x2="3" y2="-1.5" width="0.1" layer="21"/>
+<wire x1="-0.6" y1="0" x2="0.65" y2="-0.75" width="0.1" layer="21"/>
+<wire x1="0.65" y1="-0.75" x2="0.65" y2="0.75" width="0.1" layer="21"/>
+<wire x1="0.65" y1="0.75" x2="-0.6" y2="0" width="0.1" layer="21"/>
+<text x="-2" y="1.75" size="1" layer="25" ratio="10">&gt;NAME</text>
+<rectangle x1="-1" y1="-1.5" x2="-0.7" y2="1.5" layer="21"/>
+<rectangle x1="-3.2" y1="-1.5" x2="-2.9" y2="1.5" layer="21"/>
+</package>
+<package name="DO-214AB">
+<smd name="A" x="3.6" y="0" dx="2.6" dy="3.2" layer="1" rot="R180"/>
+<smd name="C" x="-3.6" y="0" dx="2.6" dy="3.2" layer="1" rot="R180"/>
+<wire x1="5" y1="-3" x2="-5.3" y2="-3" width="0.1" layer="21"/>
+<wire x1="-5.3" y1="-3" x2="-5.3" y2="3" width="0.1" layer="21"/>
+<wire x1="-5.3" y1="3" x2="5" y2="3" width="0.1" layer="21"/>
+<wire x1="5" y1="3" x2="5" y2="-3" width="0.1" layer="21"/>
+<text x="-1.9" y="3.2" size="1" layer="25" ratio="10">&gt;NAME</text>
+<wire x1="2" y1="-2" x2="2" y2="2" width="0.1" layer="21"/>
+<wire x1="2" y1="2" x2="-0.7" y2="0" width="0.1" layer="21"/>
+<wire x1="-0.7" y1="0" x2="2" y2="-2" width="0.1" layer="21"/>
+<rectangle x1="-2.1" y1="-3" x2="-0.8" y2="3" layer="21" rot="R180"/>
+<rectangle x1="-5.3" y1="-3" x2="-5" y2="3" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -6319,6 +6322,7 @@ LED board</text>
 <wire x1="386.08" y1="223.52" x2="386.08" y2="157.48" width="0.1524" layer="97"/>
 <wire x1="386.08" y1="157.48" x2="421.64" y2="157.48" width="0.1524" layer="97"/>
 <text x="162.56" y="48.26" size="1.778" layer="97">to fan</text>
+<text x="190.5" y="7.62" size="2.54" layer="97" ratio="10">addr = 0x98</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -6651,11 +6655,6 @@ LED board</text>
 <label x="223.52" y="127" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="4"/>
-<wire x1="403.86" y1="167.64" x2="398.78" y2="167.64" width="0.1524" layer="91"/>
-<label x="391.16" y="167.64" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="Q6" gate="G$1" pin="S"/>
 <pinref part="GND22" gate="G$1" pin="GND"/>
 <wire x1="157.48" y1="22.86" x2="157.48" y2="15.24" width="0.1524" layer="91"/>
@@ -6685,6 +6684,11 @@ LED board</text>
 <wire x1="375.92" y1="241.3" x2="381" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="241.3" x2="375.92" y2="236.22" width="0.1524" layer="91"/>
 <junction x="375.92" y="241.3"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="403.86" y1="175.26" x2="398.78" y2="175.26" width="0.1524" layer="91"/>
+<label x="391.16" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -6776,11 +6780,6 @@ LED board</text>
 <label x="198.12" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="403.86" y1="175.26" x2="398.78" y2="175.26" width="0.1524" layer="91"/>
-<label x="391.16" y="175.26" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="C24" gate="G$1" pin="P$1"/>
 <wire x1="187.96" y1="30.48" x2="187.96" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="VCC8" gate="G$1" pin="VCC"/>
@@ -6793,6 +6792,11 @@ LED board</text>
 <pinref part="U5" gate="G$1" pin="A1"/>
 <wire x1="203.2" y1="22.86" x2="200.66" y2="22.86" width="0.1524" layer="91"/>
 <label x="195.58" y="22.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="4"/>
+<wire x1="403.86" y1="167.64" x2="398.78" y2="167.64" width="0.1524" layer="91"/>
+<label x="391.16" y="167.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BOOT0" class="0">
@@ -7087,7 +7091,7 @@ LED board</text>
 <segment>
 <pinref part="CONN1" gate="G$1" pin="12"/>
 <wire x1="220.98" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
-<label x="223.52" y="144.78" size="1.27" layer="95"/>
+<label x="223.52" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C26" gate="G$1" pin="P$1"/>
@@ -7126,7 +7130,7 @@ LED board</text>
 <segment>
 <pinref part="CONN1" gate="G$1" pin="11"/>
 <wire x1="205.74" y1="144.78" x2="203.2" y2="144.78" width="0.1524" layer="91"/>
-<label x="195.58" y="144.78" size="1.27" layer="95"/>
+<label x="195.58" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWREN" class="0">

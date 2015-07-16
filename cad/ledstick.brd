@@ -1306,10 +1306,7 @@ Please make sure your boards conform to these design rules.</description>
 <via x="328" y="5.2" extent="1-16" drill="0.35"/>
 <wire x1="329.5" y1="5.45" x2="329.25" y2="5.2" width="0.35" layer="1"/>
 <wire x1="329.25" y1="5.2" x2="328" y2="5.2" width="0.35" layer="1"/>
-<wire x1="331.6" y1="6" x2="330.8" y2="6" width="0.25" layer="1"/>
-<wire x1="330.8" y1="6" x2="330.5" y2="5.7" width="0.25" layer="1"/>
-<wire x1="330.5" y1="5.7" x2="330.25" y2="5.45" width="0.25" layer="1"/>
-<wire x1="330.25" y1="5.45" x2="329.5" y2="5.45" width="0.25" layer="1"/>
+<wire x1="331.6" y1="6" x2="330.6" y2="6" width="0.25" layer="1"/>
 <via x="375.8" y="5.2" extent="1-16" drill="0.35"/>
 <wire x1="374.5" y1="5.45" x2="374.75" y2="5.2" width="0.35" layer="1"/>
 <wire x1="374.75" y1="5.2" x2="375.8" y2="5.2" width="0.35" layer="1"/>
@@ -1336,6 +1333,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="179.15" y1="6.25" x2="181.85" y2="6.25" width="0.3" layer="1"/>
 <contactref element="U4" pad="3"/>
 <wire x1="181.85" y1="7.2" x2="181.85" y2="6.25" width="0.3" layer="1"/>
+<contactref element="U1" pad="4"/>
+<wire x1="331.6" y1="5.5" x2="330.4" y2="5.5" width="0.25" layer="1"/>
+<wire x1="330.4" y1="5.5" x2="329.55" y2="5.5" width="0.25" layer="1"/>
+<wire x1="329.55" y1="5.5" x2="329.5" y2="5.45" width="0.25" layer="1"/>
+<wire x1="330.6" y1="6" x2="330.4" y2="5.8" width="0.25" layer="1"/>
+<wire x1="330.4" y1="5.8" x2="330.4" y2="5.5" width="0.25" layer="1"/>
 </signal>
 <signal name="SDA">
 <contactref element="J2" pad="P$2"/>

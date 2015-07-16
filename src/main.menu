@@ -1,0 +1,29 @@
+# ./mkmenu main.menu > menus.c
+
+guitop => Main Menu {
+
+    power       => set_power_level
+    kelvin      => set_white_balance
+    color       => Color {
+        skylight        => set_color_byname("skylight")
+        daylight        => set_color_byname("daylight")
+        flouresc        => set_color_byname("flourescent")
+        tungsten        => set_color_byname("tungsten")
+        lt.bulb         => set_color_byname("light bulb")
+    }
+
+#    disco       => set_disco_mode
+
+#     save        => Save To {
+#         A               => save_preset("a")
+#         B               => save_preset("b")
+#     }
+    diag        => Diag {
+        temp            => testtemp
+        color           => testcolor
+        # autostart       => autostart {
+        #     enable              => set_autostart("1")
+        #     disable             => set_autostart("0")
+        # }
+    }
+}

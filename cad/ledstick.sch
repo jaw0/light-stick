@@ -4607,6 +4607,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
+<text x="68.58" y="68.58" size="2.54" layer="97" ratio="10">addr = 0x90</text>
+<text x="119.38" y="68.58" size="2.54" layer="97" ratio="10">addr = 0x96</text>
+<text x="2.54" y="71.12" size="2.54" layer="97" ratio="10">addr = 0x72</text>
 </plain>
 <instances>
 <instance part="LED1" gate="G$1" x="20.32" y="25.4"/>
@@ -4900,6 +4903,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U4" gate="G$1" pin="A1"/>
 <wire x1="81.28" y1="83.82" x2="78.74" y2="83.82" width="0.1524" layer="91"/>
 <label x="73.66" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="TEST"/>
+<wire x1="15.24" y1="81.28" x2="12.7" y2="81.28" width="0.1524" layer="91"/>
+<label x="10.16" y="81.28" size="1.778" layer="95" ratio="10"/>
 </segment>
 </net>
 <net name="SDA" class="0">
