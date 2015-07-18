@@ -6,26 +6,26 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="5" fill="1" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="1" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="6" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="5" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="1" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="6" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -34,8 +34,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -43,19 +43,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -6286,7 +6286,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND3" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="VCCM3" library="jaw" deviceset="PWR-VCCM" device=""/>
 <part name="VCC4" library="jaw" deviceset="PWR-VCC" device=""/>
-<part name="C1" library="jaw" deviceset="C" device="0603" value=".1u, 12V"/>
+<part name="C1" library="jaw" deviceset="C" device="0603" value=".1u, 16V"/>
 <part name="C2" library="jaw" deviceset="C" device="0603" value="1u"/>
 <part name="C3" library="jaw" deviceset="C" device="1210" value="100u"/>
 <part name="GND4" library="jaw" deviceset="PWR-GND" device=""/>
@@ -6300,7 +6300,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R12" library="jaw" deviceset="R" device="0603" value="100k"/>
 <part name="R13" library="jaw" deviceset="R" device="0603" value="1k"/>
 <part name="R14" library="jaw" deviceset="R" device="1206" value=".01"/>
-<part name="C5" library="jaw" deviceset="C" device="0603" value=".002u"/>
+<part name="C5" library="jaw" deviceset="C" device="0603" value=".002u,100V"/>
 <part name="R15" library="jaw" deviceset="R" device="0603" value="88k7, .1%"/>
 <part name="R16" library="jaw" deviceset="R" device="0603" value="3k3, .1%"/>
 <part name="J1" library="jaw" deviceset="HEADER-4X1" device="-PTH"/>
@@ -6324,7 +6324,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R20" library="jaw" deviceset="R" device="0603" value="100k"/>
 <part name="R21" library="jaw" deviceset="R" device="0603" value="1k"/>
 <part name="R22" library="jaw" deviceset="R" device="1206" value=".01"/>
-<part name="C11" library="jaw" deviceset="C" device="0603" value=".002u"/>
+<part name="C11" library="jaw" deviceset="C" device="0603" value=".002u,100V"/>
 <part name="R23" library="jaw" deviceset="R" device="0603" value="88k7, .1%"/>
 <part name="R24" library="jaw" deviceset="R" device="0603" value="3k3, .1%"/>
 <part name="VCCM6" library="jaw" deviceset="PWR-VCCM" device=""/>
@@ -6362,15 +6362,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="VCC9" library="jaw" deviceset="PWR-VCC" device=""/>
 <part name="GND23" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="GND24" library="jaw" deviceset="PWR-GND" device=""/>
-<part name="C25" library="jaw" deviceset="C" device="0603" value="10u,12V"/>
-<part name="C26" library="jaw" deviceset="C" device="0603" value="10u,12V"/>
-<part name="C27" library="jaw" deviceset="C" device="0603" value=".1u,12V"/>
+<part name="C25" library="jaw" deviceset="C" device="0603" value="10u,16V"/>
+<part name="C26" library="jaw" deviceset="C" device="0603" value="10u,16V"/>
+<part name="C27" library="jaw" deviceset="C" device="0603" value=".1u,16V"/>
 <part name="VCCM7" library="jaw" deviceset="PWR-VCCM" device=""/>
 <part name="GND27" library="jaw" deviceset="PWR-GND" device=""/>
 <part name="VCCM8" library="jaw" deviceset="PWR-VCCM" device=""/>
 <part name="D6" library="jaw" deviceset="DIODE" device="SOD-323"/>
-<part name="C28" library="jaw" deviceset="C" device="0603" value="10u,12V"/>
-<part name="C29" library="jaw" deviceset="C" device="0603" value="10u,12V"/>
+<part name="C28" library="jaw" deviceset="C" device="0603" value="10u,16V"/>
+<part name="C29" library="jaw" deviceset="C" device="0603" value="10u,16V"/>
 <part name="L4" library="jaw" deviceset="L" device="-SRR1260"/>
 <part name="L5" library="jaw" deviceset="L" device="-SRR1260"/>
 </parts>
