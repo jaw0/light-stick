@@ -2624,6 +2624,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.1794" y="-0.4331"/>
 </polygon>
 </package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="OSHW-LOGO">
@@ -6180,6 +6186,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.6834" y="-1.65"/>
 </polygon>
 </symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="OSHW-LOGO" prefix="LOGO">
@@ -6215,6 +6226,25 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </technologies>
 </device>
 <device name="S" package="OSHW-LOGO-S">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="FID">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -6373,6 +6403,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C29" library="jaw" deviceset="C" device="0603" value="10u,16V"/>
 <part name="L4" library="jaw" deviceset="L" device="-SRR1260"/>
 <part name="L5" library="jaw" deviceset="L" device="-SRR1260"/>
+<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="GND28" library="jaw" deviceset="PWR-GND" device=""/>
+<part name="GND29" library="jaw" deviceset="PWR-GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6541,10 +6574,13 @@ install only one</text>
 <instance part="GND27" gate="G$1" x="375.92" y="233.68"/>
 <instance part="VCCM8" gate="G$1" x="157.48" y="53.34"/>
 <instance part="D6" gate="G$1" x="17.78" y="25.4"/>
-<instance part="C28" gate="G$1" x="360.68" y="243.84"/>
-<instance part="C29" gate="G$1" x="391.16" y="243.84"/>
+<instance part="C28" gate="G$1" x="287.02" y="152.4"/>
+<instance part="C29" gate="G$1" x="287.02" y="236.22"/>
 <instance part="L4" gate="G$1" x="299.72" y="236.22" rot="R90"/>
 <instance part="L5" gate="G$1" x="299.72" y="152.4" rot="R90"/>
+<instance part="FID1" gate="G$1" x="335.28" y="33.02"/>
+<instance part="GND28" gate="G$1" x="287.02" y="231.14"/>
+<instance part="GND29" gate="G$1" x="287.02" y="147.32"/>
 </instances>
 <busses>
 </busses>
@@ -6759,6 +6795,14 @@ install only one</text>
 <label x="195.58" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
+<pinref part="C29" gate="G$1" pin="P$2"/>
+<pinref part="GND28" gate="G$1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C28" gate="G$1" pin="P$2"/>
+<pinref part="GND29" gate="G$1" pin="GND"/>
+</segment>
+<segment>
 <pinref part="C26" gate="G$1" pin="P$2"/>
 <pinref part="C27" gate="G$1" pin="P$2"/>
 <wire x1="370.84" y1="241.3" x2="375.92" y2="241.3" width="0.1524" layer="91"/>
@@ -6766,12 +6810,6 @@ install only one</text>
 <wire x1="375.92" y1="241.3" x2="381" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="241.3" x2="375.92" y2="236.22" width="0.1524" layer="91"/>
 <junction x="375.92" y="241.3"/>
-<pinref part="C28" gate="G$1" pin="P$2"/>
-<wire x1="360.68" y1="241.3" x2="370.84" y2="241.3" width="0.1524" layer="91"/>
-<junction x="370.84" y="241.3"/>
-<pinref part="C29" gate="G$1" pin="P$2"/>
-<wire x1="381" y1="241.3" x2="391.16" y2="241.3" width="0.1524" layer="91"/>
-<junction x="381" y="241.3"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
@@ -7143,22 +7181,8 @@ install only one</text>
 <pinref part="D6" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<pinref part="L2" gate="G$1" pin="P$2"/>
-<pinref part="VCCM4" gate="G$1" pin="VCCM"/>
-<pinref part="L4" gate="G$1" pin="P$2"/>
-<wire x1="299.72" y1="243.84" x2="307.34" y2="243.84" width="0.1524" layer="91"/>
-<junction x="307.34" y="243.84"/>
-</segment>
-<segment>
 <pinref part="R17" gate="G$1" pin="P$2"/>
 <pinref part="VCCM5" gate="G$1" pin="VCCM"/>
-</segment>
-<segment>
-<pinref part="L3" gate="G$1" pin="P$2"/>
-<pinref part="VCCM6" gate="G$1" pin="VCCM"/>
-<pinref part="L5" gate="G$1" pin="P$2"/>
-<wire x1="299.72" y1="160.02" x2="307.34" y2="160.02" width="0.1524" layer="91"/>
-<junction x="307.34" y="160.02"/>
 </segment>
 <segment>
 <pinref part="CONN1" gate="G$1" pin="12"/>
@@ -7166,19 +7190,35 @@ install only one</text>
 <label x="223.52" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="C26" gate="G$1" pin="P$1"/>
-<pinref part="C27" gate="G$1" pin="P$1"/>
-<wire x1="370.84" y1="248.92" x2="375.92" y2="248.92" width="0.1524" layer="91"/>
+<pinref part="L2" gate="G$1" pin="P$2"/>
+<pinref part="VCCM4" gate="G$1" pin="VCCM"/>
+<junction x="307.34" y="243.84"/>
+<pinref part="L4" gate="G$1" pin="P$2"/>
+<wire x1="299.72" y1="243.84" x2="307.34" y2="243.84" width="0.1524" layer="91"/>
+<junction x="299.72" y="243.84"/>
+<wire x1="287.02" y1="243.84" x2="299.72" y2="243.84" width="0.1524" layer="91"/>
+<pinref part="C29" gate="G$1" pin="P$1"/>
+<wire x1="287.02" y1="241.3" x2="287.02" y2="243.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="VCCM7" gate="G$1" pin="VCCM"/>
+<pinref part="C27" gate="G$1" pin="P$1"/>
 <wire x1="375.92" y1="248.92" x2="381" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="375.92" y1="248.92" x2="375.92" y2="251.46" width="0.1524" layer="91"/>
 <junction x="375.92" y="248.92"/>
-<pinref part="C29" gate="G$1" pin="P$1"/>
-<wire x1="391.16" y1="248.92" x2="381" y2="248.92" width="0.1524" layer="91"/>
-<junction x="381" y="248.92"/>
+<pinref part="C26" gate="G$1" pin="P$1"/>
+<wire x1="370.84" y1="248.92" x2="375.92" y2="248.92" width="0.1524" layer="91"/>
+</segment>
+<segment>
 <pinref part="C28" gate="G$1" pin="P$1"/>
-<wire x1="370.84" y1="248.92" x2="360.68" y2="248.92" width="0.1524" layer="91"/>
-<junction x="370.84" y="248.92"/>
+<pinref part="L3" gate="G$1" pin="P$2"/>
+<pinref part="VCCM6" gate="G$1" pin="VCCM"/>
+<pinref part="L5" gate="G$1" pin="P$2"/>
+<wire x1="299.72" y1="160.02" x2="307.34" y2="160.02" width="0.1524" layer="91"/>
+<junction x="307.34" y="160.02"/>
+<wire x1="287.02" y1="157.48" x2="287.02" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="160.02" x2="299.72" y2="160.02" width="0.1524" layer="91"/>
+<junction x="299.72" y="160.02"/>
 </segment>
 <segment>
 <wire x1="157.48" y1="50.8" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
