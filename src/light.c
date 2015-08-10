@@ -44,6 +44,10 @@ static int i0_off = 0, i1_off = 0;
 static int i0f = 0, i1f = 0;
 static int pwm0 = 0, pwm1 = 0;
 
+// diagnostic data collection
+char diagbuf[ 16384 ];
+
+
 void
 lights_init(void){
 
@@ -92,10 +96,10 @@ static void
 safety_check(void){
     const char *err = 0;
 
-    if( temp_ctl() > MAX_TEMP || temp_mid() > MAX_TEMP || temp_far() > MAX_TEMP ){
+    if( (temp_ctl() > MAX_TEMP) || (temp_mid() > MAX_TEMP) || (temp_far() > MAX_TEMP) ){
         err = "overheat";
     }
-    if( light_v0() > MAX_VOUT || light_v1() > MAX_VOUT || light_i0() > MAX_IOUT || light_i1() > MAX_IOUT ){
+    if( (light_v0() > MAX_VOUT) || (light_v1() > MAX_VOUT) || (light_i0() > MAX_IOUT) || (light_i1() > MAX_IOUT) ){
         err = "overload";
     }
     if( !err ) return;
@@ -177,6 +181,47 @@ DEFUN(save_preset, 0)
 {
 }
 
+static void
+light_status(int dpyp){
+    static int uln = 0;
+
+    int p = ((light_i0() + light_i1() - i0_off - i1_off) * light_vi() + 512) / 1024;
+    int pe = p - power_level;
+    pe = ABS(pe);
+
+    bool ul  = 0;
+    if( pe * 10 > power_level ){
+        // batteries cannot deliver requested power
+        if( uln ++ > 100 ) ul = 1;
+    }else
+        uln = 0;
+
+
+    if( dpyp ){
+        printf("\e[J");
+        set_font("9x15");
+    }
+    // reverse video on underload
+    const char *ulrev = (ul && dpyp) ? "\e[7m" : "";
+
+    printf("power: %s%5d\e[27m\nwhite: %5d\n", ulrev, power_level, white_balance);
+    if( dpyp ) set_font("5x8");
+    printf("0 %5x %4d mA %5d mV\n", pwm0>>8, light_i0() - i0_off, light_v0());
+    printf("1 %5x %4d mA %5d mV\n", pwm1>>8, light_i1() - i1_off, light_v1());
+    printf("B %s%5d\e[27m %4d dC %s%5d mW\e[27m\n", ulrev, light_vi(), temp_max(), ulrev, p);
+    printf("RGB   %0.06x %s\n",     color_rgb(), ((ul && dpyp )?"\e[7m*BATT*\e[27" : ""));
+
+    if( ul && dpyp ) play(ivolume, "c+6");
+    if( !dpyp ) printf("\n");
+}
+
+DEFUN(status, "system status")
+{
+    light_status(0);
+    return 0;
+}
+
+
 extern const struct Menu guitop;
 
 static void
@@ -241,31 +286,7 @@ lights_control(void){
 #endif
 
         if( n%10 == 0 ){
-            int p = ((light_i0() + light_i1() - i0_off - i1_off) * light_vi() + 512) / 1024;
-            int pe = p - power_level;
-            pe = ABS(pe);
-
-            bool ul  = 0;
-            if( pe * 10 > power_level ){
-                // batteries cannot deliver requested power
-                if( uln ++ > 100 ) ul = 1;
-            }else
-                uln = 0;
-
-
-            printf("\e[J");
-            set_font("9x15");
-            // reverse video on underload
-            const char *ulrev = ul ? "\e[7m" : "";
-
-            printf("power: %s%5d\e[27m\nwhite: %5d\n", ulrev, power_level, white_balance);
-            set_font("5x8");
-            printf("0 %5x %4d mA %5d mV\n", pwm0>>8, light_i0() - i0_off, light_v0());
-            printf("1 %5x %4d mA %5d mV\n", pwm1>>8, light_i1() - i1_off, light_v1());
-            printf("B %s%5d\e[27m %4d dC %s%5d mW\e[27m\n", ulrev, light_vi(), temp_max(), ulrev, p);
-            printf("RGB   %0.06x %s\n", color_rgb(), (ul?"\e[7m*BATT*\e[27" : ""));
-            if( ul ) play(ivolume, "c+6");
-
+            light_status(1);
             n = 0;
         }
         n ++;
@@ -364,6 +385,7 @@ lights_run(void){
             n ++;
         }
 
+        update_fan();
         update_lights();
         usleep(1000);
     }
@@ -380,7 +402,6 @@ struct LogDat {
     int p;
     unsigned short i, v;
 };
-static struct LogDat datbuf[2048];
 
 DEFUN(testlight, "test leds")
 {
@@ -393,6 +414,8 @@ DEFUN(testlight, "test leds")
     i0f = i1f = 0;
     pwm0 = pwm1 = 0;
 
+    struct LogDat *datbuf = (struct LogDat*)diagbuf;
+
     int n = 0;
 
     while(1){
@@ -400,16 +423,9 @@ DEFUN(testlight, "test leds")
         safety_check();
 
         if( check_button() ) break;
-        if( n > 100000 )     break;
+        if( n > 10000 )      break;
 
         update_lights();
-
-        //if( (n % 100) == 0 ){
-        //    printf("p0 %6d p1 %6d; 0[%4d %6d %5d] 1[%4d %6d %5d]\n",
-        //           pwm0 >> 8, pwm1 >> 8,
-        //           light_i0() - i0_off, i0f>>8, light_v0(),
-        //           light_i1() - i1_off, i1f>>8, light_v1() );
-        //}
 
         if( n < ELEMENTSIN(datbuf) ){
             datbuf[n].i = i0f;
@@ -430,6 +446,7 @@ DEFUN(testlight, "test leds")
 
     return 0;
 }
+
 
 DEFUN(testpwm, "test leds")
 {
@@ -452,7 +469,7 @@ DEFUN(testpwm, "test leds")
         safety_check();
 
         if( check_button() ) break;
-        if( ++n > 500 )     break;
+        if( ++n > 500 )      break;
 
         printf("%6d: p0 %6d i0 %6d v0 %6d; p1 %6d i1 %6d v1 %6d\n",
                (int)(t1 - t0),
@@ -465,3 +482,49 @@ DEFUN(testpwm, "test leds")
     return 0;
 }
 
+DEFUN(testlight2, "test leds")
+{
+
+    power_level   = 0;
+
+    lights_offset();
+
+    struct LogDat *datbuf = (struct LogDat*)diagbuf;
+
+    int n = 0;
+
+    for(n=0; n<50; n++){
+        power_level = n * 16;
+        int i = 0;
+
+        while(1){
+
+            light_adc_read();
+            safety_check();
+
+            if( check_button() ) break;
+            if( ++i > 500 )        break;
+
+            update_lights();
+            usleep(1000);
+        }
+
+        // record final values
+        if( n < ELEMENTSIN(datbuf) ){
+            datbuf[n].i = i0f;
+            datbuf[n].v = light_v0();
+            datbuf[n].p = pwm0 >> 8;
+        }
+        lights_safe();
+        usleep(250000);
+    }
+
+    lights_safe();
+
+    for(n=0; n<50; n++){
+        printf("%d %d %d %d\n", n*16, datbuf[n].p, datbuf[n].i, datbuf[n].v);
+    }
+
+
+    return 0;
+}

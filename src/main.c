@@ -52,7 +52,7 @@ random(void){
 
     x = (x<<7) | (x>>25);
     x ^= y;
-    return x;
+    return x ^ lrand48();
 }
 
 DEFUN(set_autostart, 0)

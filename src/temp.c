@@ -97,16 +97,6 @@ temp_max(void){
 
 /****************************************************************/
 
-static void
-update_fan(void){
-
-    int temp = temp_max();
-    // ...
-
-}
-
-/****************************************************************/
-
 DEFUN(testtemp, "test temp")
 {
     tempbuf[0] = tempbuf[1] = tempbuf[2] = 0xDEAD;
